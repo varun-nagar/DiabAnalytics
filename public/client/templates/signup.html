@@ -1,0 +1,44 @@
+<section class="row">
+
+    <h1 class="col-md-6 col-md-offset-3"> please complete your profile</h1>
+    <div class="col-md-3 col-md-offset-4">
+        <form name='signupForm' novalidate>
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="email" ng-model="user.email" ng-disabled="true" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="name" ng-model="user.name" ng-required="true" />
+                <div ng-if="signupForm.name.$touched && signupForm.name.$invalid" class="alert alert-danger">name required!!!</div>
+            </div>
+            <!--<div class="form-group">
+                <input type="text" name="dob" class="form-control" placeholder="dob" ng-model="user.dob" />
+                <div ng-if="signupForm.dob.$touched && signupForm.dob.$invalid" class="alert alert-danger">enter valid dob!!!</div>
+            </div>-->
+            <div class="form-group">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" id="dob_select" role="button" data-toggle="dropdown" data-target="#signup" href="">
+                        <div class="input-group"><input type="text" class="form-control" data-ng-model="user.dob" placeholder="dob"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="user.dob" data-datetimepicker-config="{ dropdownSelector: '#dob_select',minView:'day',modelType: 'DD-MM-YYYY' }" />
+                    </ul>
+                </div>
+            </div>
+            <!---->
+            <div class="form-group">
+                <input type="number" name="phone" class="form-control" placeholder="phone" ng-model="user.phone" ng-pattern="/^[0-9]{10}$/"
+                />
+                <div ng-if="signupForm.phone.$touched && signupForm.phone.$invalid" class="alert alert-danger">enter valid phone no.!!!</div>
+            </div>
+            <div class="form-group">
+                <select name="diabType" class="form-control" ng-model="user.diabType">
+                    <option value="">--select diab type--</option>
+                    <option value="type1">Type 1</option>
+                    <option value="type2">Type 2</option>
+                </select>
+            </div>
+            <div class="btn btn-primary form-control" ng-disabled="signupForm.$dirty && signupForm.$invalid" ng-click="saveProfile()">save</div>
+        </form>
+    </div>
+</section>
