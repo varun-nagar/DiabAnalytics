@@ -41,7 +41,7 @@
 
 </head>
 
-<body ng-app="appModule">
+<body ng-app="appModule" ng-cloak>
     <section ng-controller="mainCtrl">
         <app-header ng-if="isLogin"></app-header>
         <span ng-if="isLogin" ng-click="openSideBar()" class="bread-crum">&#9776;</span>

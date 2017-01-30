@@ -5,6 +5,7 @@ function appSideNavController($location) {
     };
 
     this.navigateTo = function (navPath) {
+        this.closeSideNav();
         $location.path(navPath);
     };
 }
