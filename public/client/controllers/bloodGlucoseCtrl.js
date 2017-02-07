@@ -1,4 +1,4 @@
-angular.module("appModule").controller("bloodGlucoseCtrl", ["$scope", function ($scope) {
+angular.module("appModule").controller("bloodGlucoseCtrl", ["$scope","$timeout", function ($scope,$timeout) {
     $scope.graphTiles = [
         {
             key: "svg1",
@@ -13,4 +13,13 @@ angular.module("appModule").controller("bloodGlucoseCtrl", ["$scope", function (
             height: "350"
         }
     ];
+
+    $scope.showLoader = function () {
+        $scope.loading = true;
+    };
+
+    $scope.hideLoader = function () {
+        $scope.loading = false;
+    };
+
 }]);
