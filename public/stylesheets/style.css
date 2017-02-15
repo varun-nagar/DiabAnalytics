@@ -15,6 +15,7 @@ a {
 .login-container{
   /*border: 1px solid #000022;*/
   margin: 10% auto;
+  background-image: -webkit-radial-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLwW0x7XKLHM/v3/-1x-1.jpg');
 }
 
 .app-desc{
