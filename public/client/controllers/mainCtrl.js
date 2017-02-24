@@ -1,4 +1,4 @@
-angular.module("appModule").controller("mainCtrl", ["$scope", "$rootScope", "checkLoginService", function ($scope, $rootScope, checkLoginService) {
+angular.module("appModule").controller("mainCtrl", ["$scope", "$rootScope", "checkLoginService", "bgImageService", function ($scope, $rootScope, checkLoginService, bgImageService) {
     $rootScope.isLogin = checkLoginService.getLogin();
 
     $scope.openSideBar = function () {
@@ -7,9 +7,12 @@ angular.module("appModule").controller("mainCtrl", ["$scope", "$rootScope", "che
 
     $rootScope.$watch(function (scope) { return scope.isLogin; }, function (newVal, oldVal) {
         if (newVal) {
-            document.getElementsByTagName("body")[0].style.background="none";
+            document.getElementsByTagName("body")[0].style.background = "none";
         } else {
-            document.getElementsByTagName("body")[0].style.background="-webkit-radial-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLwW0x7XKLHM/v3/-1x-1.jpg')";            
+            bgImageService.getBgImage().then(function (response) {
+                resObj = response.data;
+                document.getElementsByTagName("body")[0].style.background = "-webkit-radial-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(" + resObj.imgUrl + ")";
+            })
         }
     })
 
