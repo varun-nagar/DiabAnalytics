@@ -1,5 +1,5 @@
 
-var User = require('../../models/user'); // get our mongoose model
+var bgImage = require('../../models/bgImage'); // get our mongoose model
 
 var method = function () {
     var api = function (req, res) {
