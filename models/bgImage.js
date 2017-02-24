@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = new mongoose.Schema({
     set_date: Date,
-    url: string,
+    url: String,
     created_at: Date,
     updated_at: Date
 });
