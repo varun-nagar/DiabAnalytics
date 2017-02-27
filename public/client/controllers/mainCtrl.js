@@ -11,7 +11,8 @@ angular.module("appModule").controller("mainCtrl", ["$scope", "$rootScope", "che
         } else {
             bgImageService.getBgImage().then(function (response) {
                 resObj = response.data;
-                document.getElementsByTagName("body")[0].style.background = "-webkit-radial-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(" + resObj.imgUrl + ")";
+                // document.getElementsByTagName("body")[0].style.background = "-webkit-radial-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(" + resObj.imgUrl + ")";
+                document.getElementsByTagName("body")[0].style.background = "-webkit-radial-gradient(rgba(0,50,100,0.5),rgba(0,50,50,0.5)), url(" + resObj.imgUrl + ")";
             })
         }
     })

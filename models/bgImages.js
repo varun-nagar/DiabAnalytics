@@ -22,7 +22,7 @@ Schema.pre('save', function (next) {
     next();
 });
 
-var bgImage = mongoose.model('bgImage', Schema);
+var bgImages = mongoose.model('bgImages', Schema);
 
 // set up a mongoose model and pass it using module.exports
-module.exports = bgImage;
+module.exports = bgImages;

@@ -27,7 +27,8 @@ a {
 }
 
 .form-container h3 , .app-desc span, .app-desc, section h1 {
-  color: #195a91;
+  /*color: #195a91;*/
+  color: #ffffff;
   font-family: cursive;
 }
 
