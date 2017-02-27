@@ -1,7 +1,7 @@
 // get an instance of mongoose and mongoose.Schema
 var mongoose = require('mongoose');
 var Schema = new mongoose.Schema({
-    set_date: Date,
+    set_date: String,
     url: String,
     created_at: Date,
     updated_at: Date
