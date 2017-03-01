@@ -1,7 +1,12 @@
+html, body{
+  height: 100%;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #eee;
+  width: 100%;
 }
 
 a {
@@ -30,6 +35,7 @@ a {
   /*color: #195a91;*/
   color: #ffffff;
   font-family: cursive;
+  font-weight: bold;
 }
 
 .app-desc span{
